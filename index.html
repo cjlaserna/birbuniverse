@@ -18,7 +18,7 @@
 		<link rel = "stylesheet" type = "text/css" href = "index.css" />
 		 
 		<!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> 
-		<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
 
 		<link href="https://fonts.googleapis.com/css2?family=VT323&family=Work+Sans:wght@300;400&display=swap&family=Oxygen+Mono&display=swap" rel="stylesheet">
@@ -224,12 +224,10 @@
 		  }
 		  
 		  <!-- .innerHTML = str(name); -->
-		  console.log(popuptexts);
 		  var textstemp;
 		  var element;
 		  for (textstemp = 0; textstemp < popuptexts.length; textstemp++){
 			element = popuptexts[textstemp];
-			console.log(element.classList);
 			if (element.classList.contains('chartitle')){
 				element.innerHTML = name;
 			} else if (element.classList.contains('charsubtext')) {

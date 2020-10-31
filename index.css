@@ -32,7 +32,6 @@ body {
 	width: 100%;
 	font-weight: 100;
 	margin: 0;
-	height: 200vh;
 }
 .hero{
 	display:flex;
@@ -46,9 +45,10 @@ body {
 	overflow:hidden;
 }
 .background-overlay{
-	width: 100%;
+	width: 100vw;
 	position: absolute;
-	height: 100%;
+	height: 100vh;
+	background-size: 50%;
 	background-image: url('homepage/workbg.png');
 	z-index:2;
 	pointer-events:none;
@@ -56,10 +56,10 @@ body {
 .centerpiece{
 	background-image: url('homepage/logo.gif');
 	background-repeat: no-repeat;
-	background-size: 482px, 282px;
+	background-size: 25vw;
 	background-position:center;
-	width:482px;
-	height:482px;
+	width:25vw;
+	height: 25vw;
 	position:relative;
 	display:block;
 	z-index:2;
@@ -88,7 +88,7 @@ body {
 	z-index:2;
 	font-family: 'VT323', monospace; 
 	position: relative;
-	font-size: 2em;
+	font-size: 2vw;
 	text-align:center;
 }
 /* ---- particles.js container ---- */ 
@@ -103,8 +103,7 @@ body {
 	cursor: pointer;
 }
 .scroll-arrow img{
-	width: 85.5px;
-	height: 84.5px;
+	width: 5vw;
 }
 .scroll-arrow:hover{
 	-webkit-filter: drop-shadow(3px 3px 0 white)
@@ -210,8 +209,7 @@ body {
 	flex-direction: column;
 }
 .arrow-nav img{
-	width: 85.5px;
-	height: 84.5px;
+	width: 5vw;
 	margin-bottom: 20px;
 	cursor: pointer;
 }
@@ -244,8 +242,7 @@ body {
 }
 
 .frame{
-	width:1308px;
-	height: 714px;
+	width:75vw;
 	border-radius: 10px;
 	position:absolute;
 }
@@ -255,20 +252,16 @@ body {
 	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
 	filter: grayscale(100%);
 	transition: filter 400ms ease-in-out;
-	width: 280px;
-	height:456px;
-	margin-right: 6px;
-	margin-left: 6px;
+	width: 16vw;
+	margin-right: .5vw;
+	margin-left: .5vw;
 	bottom: 1.9vh;
 }
-.player_wrapper{
+.playerwrapper{
 	position: absolute;
-	width:1308px;
-	height: 714px;
 	display:flex;
 	justify-content:center;
 	align-items:center;
-	
 }
 
 .player:hover{
@@ -292,26 +285,23 @@ body {
 	
 	color: green;
 	border-style: ridge;
-	border-width: 10px;
-	border-radius: 2px;
+	border-width: 1vw;
 	border-radius: 10px;
 }
 .chartext{
 	text-align:left;
 	font-family: 'orcaextended', monospace;
 	color: white;
-	margin-top: 5px;
-	font-size: 2em;
+	font-size: 2vw;
 	margin-bottom: 5px;
 }
 .chartitle{
 	color: red;  
-	font-size: 3em;
+	font-size: 3vw;
 }
 .charsubtext{
 	color: blue;
-	font-size: 1.5em;
-	border-right: 3px solid blue;
+	font-size: 1.5vw;
 }
 .chartxtcontainer, .charimgcontainer{
 	width:50%;
@@ -329,6 +319,11 @@ body {
 	display: none;
 	animation: fadeout 0.5s 2.5s;
 }
+.game{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
 .chartyped{
 	white-space: nowrap;
 	overflow: hidden; 
@@ -337,7 +332,7 @@ body {
 	opacity:0;
 }
 .prompt{
-	font-size: 1em;
+	font-size: 1vw;
 	color:white;
 }
 .charimgcontainer{
@@ -348,7 +343,7 @@ body {
 	
 	height: 75%;
 	border-style: ridge;
-	border-width: 10px;
+	border-width: .5vw;
 	border-color: grey;
 	
 	opacity: .8;
@@ -376,14 +371,14 @@ body {
 
 @keyframes typed{
   from{width: 0;}
-  to{width: 472px;}
+  to{width: 50vw;}
 }
 @keyframes typed2{
 	0%{ width: 0; }
 	from { opacity:0; }
 	1%{ opacity:1; }
 	to{ opacity:1; }
-	100%{ opacity:1; width: 472px;}
+	100%{ opacity:1; width: 50vw;}
 }
 
 /* cursor animations */
