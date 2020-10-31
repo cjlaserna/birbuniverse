@@ -84,7 +84,7 @@ body {
 }
 .text-container .hero-caption{
 	bottom: 10vh;
-	display:block !important;
+	display:block;
 	z-index:2;
 	font-family: 'VT323', monospace; 
 	position: relative;
@@ -178,7 +178,7 @@ body {
 .about .answers{
 	margin-left:10px;
 	margin-top: 5px;
-	font-size: 1vw;
+	font-size: 1.25vw;
 }
 .low-highlight{
 	width:30%;
@@ -196,7 +196,6 @@ body {
 	width: 50%;
 	display: flex;
 	position: absolute;
-	height: 25%;
 	justify-content:center;
 	align-items:center;
 	
@@ -241,7 +240,7 @@ body {
           drop-shadow(-2px -2px 0 white);
 }
 
-.frame{
+.selectframe{
 	width:75vw;
 	border-radius: 10px;
 	position:absolute;
@@ -884,4 +883,103 @@ body {
             animation-timing-function: ease-out;
     opacity: 1;
   }
+}
+.smallselect{
+	display:none;
+}
+@media only screen and (max-width: 1025px){
+	#charpopup{
+		display:none;
+	}
+	.selectframe{
+		display:none;
+	}
+	.playerwrapper{
+		display:none;
+	}
+	.smallselect{
+		display: flex;
+	}
+	body{
+		overflow:auto;
+	}
+	.text-container .hero-caption{
+		display: none;
+	}
+	.centerpiece{
+		width:50vw;
+		height:50vw;
+		background-size: 50vw;
+	}
+	.scroll-arrow img{
+		width: 10vw;
+	}
+	.content-box{
+		width: 75vw;
+		height: 95vh;
+	}
+	.about .questions{
+		font-size: 3vw;
+	}
+	.about .answers{
+		font-size: 1.8vw;
+	}
+	.game .content-box{
+		padding: 20px;
+		background-image:url('https://45.media.tumblr.com/da60c13b478dda09ab90c27e880983b8/tumblr_nd4pwdPKdc1tun3l0o1_1280.gif');
+		display: flex; 
+		align-items:center;
+		justify-content:center;
+		flex-direction:column;
+	}
+	.charsswrap{
+		margin: 5px;
+		display: flex;
+		align-items:center;
+		justify-content:center;
+	}
+	.charssdesc{
+		float: left;
+		margin: 5px;
+		width:75%;
+	}
+	.charssdesc .charsstitle{
+		color: red;
+	}
+	.charssdesc .charssability{
+		color: white;
+	}
+	.smallimg{
+		width: 10vw;
+		display: inline-block;
+		height: 10vw;
+		border-style: ridge;
+		border-width: 1vw;
+		border-radius: 10px;
+		background-size:cover;
+		float:left;
+	}
+	#pengiss{
+		background-image: url('charpopup/pengi.jpg');
+	}
+	#pengoss{
+		background-image: url('charpopup/pengo.jpg');
+	}
+	#spudss{
+		background-image: url('charpopup/spud.jpg');
+	}
+	#buckss{
+		background-image: url('charpopup/buck.jpg');
+	}
+}
+@media only screen and (max-width: 600px){
+	.smallimg{
+		display:none;
+	}
+	.arrow-nav{
+		display:none;
+	}
+	.about .answers{
+		font-size:2.5vw;
+	}
 }
